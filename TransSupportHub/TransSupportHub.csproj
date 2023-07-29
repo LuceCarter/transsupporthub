@@ -62,6 +62,7 @@
 	  <PackageReference Include="CommunityToolkit.MVVM" Version="8.0.0" />
 	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.52" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="Realm" Version="11.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -96,6 +97,10 @@
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Models\" />
 	</ItemGroup>
 
 	<PropertyGroup Label="MauiAppAccelerator">
