@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TransSupportHub.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:TransSupportHub.Views"
+    xmlns:local="clr-namespace:TransSupportHub">
+
+    <ShellContent
+        Shell.NavBarIsVisible="false"
+        Title="Welcome"
+        Icon="iconblank.png"
+        ContentTemplate="{DataTemplate views:WelcomePage}"
+        Route="WelcomePage" />
+
+    <ShellContent
+        Shell.NavBarIsVisible="false"
+        Title="Menu"
+        Icon="iconblank.png"
+        ContentTemplate="{DataTemplate views:MenuPage}"
+        Route="MenuPage" />
+</Shell>

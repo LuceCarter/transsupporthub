@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:vm="clr-namespace:TransSupportHub.ViewModels"
+             x:Class="TransSupportHub.Views.AgePage"
+             x:DataType="vm:AgeViewModel"
+             Title="AgePage">
+    <VerticalStackLayout>
+        <Label 
+            Text="What is your age?"
+            FontSize="Title" />
+
+        <RadioButton Content="16 or Under"
+                     x:Name="underSixteen">
+            <RadioButton.Behaviors>
+                <mct:EventToCommandBehavior 
+                    EventName="CheckedChanged"
+                    Command="{Binding AgeRadioButtonSelectionChangedCommand}"
+                    CommandParameter="{Binding Source={x:Reference underSixteen}, Path=Content}"/>
+            </RadioButton.Behaviors>
+        </RadioButton>
+        <RadioButton Content="17"
+                     x:Name="seventeen">
+            <RadioButton.Behaviors>
+                <mct:EventToCommandBehavior 
+                    EventName="CheckedChanged"
+                    Command="{Binding AgeRadioButtonSelectionChangedCommand}"
+                    CommandParameter="{Binding Source={x:Reference seventeen}, Path=Content}"/>
+            </RadioButton.Behaviors>
+        </RadioButton>
+        <RadioButton Content="18"
+                     x:Name="eighteen">
+            <RadioButton.Behaviors>
+                <mct:EventToCommandBehavior 
+                    EventName="CheckedChanged"
+                    Command="{Binding AgeRadioButtonSelectionChangedCommand}"
+                    CommandParameter="{Binding Source={x:Reference eighteen}, Path=Content}"/>
+            </RadioButton.Behaviors>
+        </RadioButton>
+        <RadioButton Content="18+"
+                     x:Name="overEighteen">
+            <RadioButton.Behaviors>
+                <mct:EventToCommandBehavior 
+                    EventName="CheckedChanged"
+                    Command="{Binding AgeRadioButtonSelectionChangedCommand}"
+                    CommandParameter="{Binding Source={x:Reference overEighteen}, Path=Content}"/>
+            </RadioButton.Behaviors>
+        </RadioButton>
+    </VerticalStackLayout>
+</ContentPage>

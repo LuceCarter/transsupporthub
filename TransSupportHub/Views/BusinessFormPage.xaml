@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TransSupportHub.ViewModels"
+             x:Class="TransSupportHub.Views.BusinessFormPage"
+             x:DataType="vm:BusinessFormViewModel"
+             Title="BusinessFormPage">
+    <Grid x:Name="MainGrid">
+
+        <VerticalStackLayout VerticalOptions="FillAndExpand" Padding="6" Spacing="10" HorizontalOptions="CenterAndExpand">
+            <VerticalStackLayout VerticalOptions="CenterAndExpand" Spacing="30">
+
+                <!-- Place new controls here -->
+                <VerticalStackLayout x:Name="FormLayout" Spacing="5" VerticalOptions="CenterAndExpand">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="What would you like to be known as?" FontSize="20" FontAttributes="Bold"/>
+                        <Entry Text="{Binding NameText}" 
+                               Keyboard="Plain" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="What is your email address?" FontSize="20" FontAttributes="Bold"/>
+                        <Entry Text="{Binding EmailText}" Keyboard="Plain"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout>
+                        <Label Text="Describe your business" FontSize="20" FontAttributes="Bold" />
+                        <Editor Text="{Binding BusinessDescText}" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+            <Button Command="{Binding SubmitInfoCommand}"
+                        VerticalOptions="EndAndExpand" 
+                        Text="Submit"/>
+        </VerticalStackLayout>
+
+
+    </Grid>
+</ContentPage>

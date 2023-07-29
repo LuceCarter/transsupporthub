@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TransSupportHub.ViewModels"
+             x:Class="TransSupportHub.Views.HelpCommunityPage"
+             x:DataType="vm:HelpCommunityViewModel"
+             Title="HelpCommunityPage">
+    <VerticalStackLayout 
+        Spacing="25"
+        HorizontalOptions="Center">
+        <Label 
+            Text="How you can help the trans community"
+            FontSize="Title" />
+        <Label Text="We'd like to form a directory of trans businesses for trans people. Do you want to be added?" />
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Yes"
+                    Command="{Binding YesAnswerCommand}"/>
+            <Button Text="No" 
+                    Command="{Binding NoAnswerCommand}"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TransSupportHub.ViewModels"
+             x:Class="TransSupportHub.Views.WelcomePage"
+             x:DataType="vm:WelcomeViewModel"          
+             Shell.NavBarIsVisible="False">
+
+
+
+    <Grid RowDefinitions="Auto,*,*, *, *"
+          HorizontalOptions="Center"
+          VerticalOptions="Center">
+        <Image
+                Grid.Row="1"              
+                HeightRequest="150"
+                WidthRequest="150"               
+               Source="tsh.png" />
+        <Label Grid.Row="2" 
+                Text="Welcome!"                  
+                   HorizontalOptions="CenterAndExpand"
+               FontSize="Large" />
+
+        <Button Grid.Row="3"
+                        HorizontalOptions="CenterAndExpand"
+                  HeightRequest="50"
+                WidthRequest="200"
+                Text="Get Started"
+                Command="{Binding GetStartedCommand}"
+                   />
+
+        <Label  Grid.Row="4" 
+                Text="*Please note this is a UK only service"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="20"/>
+    </Grid>
+
+</ContentPage>
