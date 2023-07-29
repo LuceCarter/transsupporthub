@@ -8,6 +8,6 @@ namespace TransSupportHub.Helpers
 {
     public static class AppConfig
     {
-        public static readonly string EventbriteAPIKey = "DPV7H4RGDSUTIICCNFF5";
+        public static readonly string RealmAppId = "<SET THE APP ID HERE>";
     }
 }
