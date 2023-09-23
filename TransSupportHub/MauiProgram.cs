@@ -1,4 +1,6 @@
-﻿namespace TransSupportHub;
+﻿using Realms;
+
+namespace TransSupportHub;
 
 public static class MauiProgram
 {
@@ -17,6 +19,9 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<MenuViewModel>();
         builder.Services.AddSingleton<MenuPage>();
+
+		Realm realm = Realm.GetInstance();
+		builder.Services.AddSingleton(realm);
 
         builder.Services.AddSingleton<WelcomeViewModel>();
         builder.Services.AddSingleton<WelcomePage>();

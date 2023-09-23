@@ -99,10 +99,6 @@
 	  </None>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Models\" />
-	</ItemGroup>
-
 	<PropertyGroup Label="MauiAppAccelerator">
 		<wizardVersion>v1.1</wizardVersion>
 		<projectType>MVVMToolkit</projectType>

@@ -1,11 +1,17 @@
-﻿namespace TransSupportHub;
+﻿using TransSupportHub.Helpers;
+
+namespace TransSupportHub;
 
 public partial class App : Application
 {
+	public static Realms.Sync.App RealmApp;
 	public App()
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		RealmApp = Realms.Sync.App.Create(AppConfig.RealmAppId);
+
+        MainPage = new AppShell();
+
 	}
 }
