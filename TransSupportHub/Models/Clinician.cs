@@ -14,7 +14,12 @@ namespace TransSupportHub.Models
         [MapTo("_id")]
         public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
 
+        [MapTo("owner_id")]
+        [Required]
+        public string OwnerId { get; set; }
+
         [MapTo("name")]
+        [Required]
         public string Name { get; set; }
 
         [MapTo("pronouns")]
@@ -27,9 +32,11 @@ namespace TransSupportHub.Models
         public IList<string> Qualifications { get;}
 
         [MapTo("location")]
+        [Required]
         public string Location { get; set; }
 
         [MapTo("clinic_name")]
+        [Required]
         public string ClinicName { get; set; }
 
         [MapTo("clinic_address")]

@@ -2,6 +2,14 @@
 
 public partial class MenuViewModel : ObservableObject
 {
+
+    [RelayCommand]
+    public async Task OnAppearing()
+    {
+        await RealmService.Init();
+        
+    }
+
     [RelayCommand]
     async Task FindGenderClinic()
     {
